@@ -1,5 +1,5 @@
 import React from 'react';
-import Gif from '../assets/img/hero.gif';
+import HeroVideo from '../assets/img/hero.mp4';
 import UploadArea from './UploadArea';
 
 const Home = () => {
@@ -15,7 +15,19 @@ const Home = () => {
         <UploadArea />
       </div>
       <div className="hero__right">
-        <img src={Gif} alt="Animation Gif" className="hero__gif" />
+        <video
+          src={HeroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '100%',
+            maxWidth: '500px',
+            borderRadius: '10px',
+            objectFit: 'cover'
+          }}
+        />
       </div>
     </div>
   );
